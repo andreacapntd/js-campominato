@@ -13,17 +13,24 @@
 
 var numeriCpu = [];
 var numeriUtente = [];
-for (var i = 0; i < 16; i++) {
+for (var i = 0; i < 10; i++) {
   var numeriRandom = getRandomIntInclusive(1, 100);
   numeriCpu.push(numeriRandom);
+  
 }
 console.log(numeriCpu);
 
-for (var i = 0; i < 5; i++) {
-  var richiestaUtente = parseInt(prompt("Inserisci un numero da 1 a 100"));
-  numeriUtente.push(richiestaUtente);
-}
-console.log(numeriUtente);
+
+
+
+
+
+
+
+
+
+
+
 
 //Funzioni
 function getRandomIntInclusive(min, max) {
