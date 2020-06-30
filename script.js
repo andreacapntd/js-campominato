@@ -11,12 +11,13 @@
 // con difficoltà 1 =>  tra 1 e 80
 // con difficoltà 2 => tra 1 e 50
 
+//genero 16 numeri casuali da 1 a 100 per il computer
+
 var numeriCpu = [];
-var numeriUtente = [];
-for (var i = 0; i < 10; i++) {
+
+for (var i = 0; i < 16; i++) {
   var numeriRandom = getRandomIntInclusive(1, 100);
   numeriCpu.push(numeriRandom);
-  
 }
 console.log(numeriCpu);
 
@@ -24,17 +25,24 @@ console.log(numeriCpu);
 
 
 
+//chiedo all'utente x numeri sempre da 1 a 100
+ var numeriUtente = [];
+ 
 
 
+//controllo che il numero dell'utente non sia presente nei numeri del computer(se presente il gioco termina) oppure il gioco finisce se finiti i tentativi.
 
-
-
-
-
+//comunico punteggio(num tentativi)
 
 //Funzioni
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function richiestaCheckNumeroUtente (array, num) {
+  for (var i = 0; i < array.length; i++) {
+    array[i]
+  }
 }
