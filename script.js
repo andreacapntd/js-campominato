@@ -17,9 +17,11 @@
 //creo un array per contenere i numeri generati random(bombe)
 var bombe = [];
 // utilizzo il ciclo while per generare i numeri random(bombe)
-var i = 0;
+// var i = 0;
+//dichiaro una variabile per il numero delle bombe inserite
+var numeroBombe = 16;
 
-while (i < 16) {
+while (bombe.length < numeroBombe ) {
   var numeriRandom = getRandomIntInclusive(1, 100);
   //test della funzione
   // console.log(numeriRandom);
@@ -29,7 +31,7 @@ while (i < 16) {
     // inserisco con push i numeri random nell array bombe
     bombe.push(numeriRandom)
   }
-  i++
+  // i++
 }
 
 //test push
@@ -63,7 +65,8 @@ while (numeriUtente.length < tentativi) {
 //test push utente
 console.log(numeriUtente);
 
-
+// Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
+// La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
 
 
 
