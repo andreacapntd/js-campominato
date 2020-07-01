@@ -11,6 +11,10 @@
 // con difficoltà 1 =>  tra 1 e 80
 // con difficoltà 2 => tra 1 e 50
 
+//faccio scegliere all utente il livello di difficoltà
+alert("CHOOSE YOUR DESTINY!!")
+var destiny = parseInt(prompt(" Difficoltà 0 = numeri casuali da 1 a 100; Difficoltà 1 = numeri casuali da 1 a 80; Difficoltà 2 = numeri casuali da 1 a 50"));
+
 // Il computer deve generare 16 numeri casuali tra 1 e 100.
 //creo un array per contenere i numeri generati random(bombe)
 var bombe = [];
@@ -18,8 +22,18 @@ var bombe = [];
 var numeroBombe = 16;
 // utilizzo il ciclo while per generare i numeri random(bombe)
 // var i = 0;
-while (bombe.length < numeroBombe ) {
-  var numeriRandom = getRandomIntInclusive(1, 100);
+while (bombe.length < numeroBombe) {
+  var numeriRandom;
+  //condizioni sulla difficoltà scelta
+  if  (destiny == 0) {
+    numeriRandom = getRandomIntInclusive(1, 100);
+  } else if (destiny == 1) {
+    numeriRandom = getRandomIntInclusive(1, 80);
+  } else if (destiny == 2) {
+    numeriRandom = getRandomIntInclusive(1, 50);
+  } else {
+    alert("BOOOOOOOOM!");
+  }
   //test della funzione
   // console.log(numeriRandom);
   // I numeri non possono essere duplicati
