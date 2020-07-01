@@ -46,11 +46,13 @@ var numeriUtente = [];
 var tentativi = 3;
 // dichiaro una variabile per il punteggio
 var punteggio = 0;
+//l'utente inserisce i numeri fino al massimo di tentativi consentiti o fino a quando prende una bomba
+var trovato = false;
 
 //utilizzo ciclo while per richiedere i numeri all'utente
 // var j = 0;
 
-while (numeriUtente.length < tentativi) {
+while (numeriUtente.length < tentativi && trovato == false) {
   var richiestaNumero = parseInt(prompt("Benvenuto! Inserisci uno alla volta un numero da 1 a 100 e buona fortuna"));
   //test richiesta del numero
   // console.log(richiestaNumero);
@@ -96,4 +98,11 @@ function inArray (array, elemento) {
     i++
   }
   return trovato;
+}
+
+function checkRange(min,max,num) {
+  if (num < min || num > max || isNaN(num)) {
+    return true;
+  }
+  return false;
 }
