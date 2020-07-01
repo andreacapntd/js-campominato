@@ -41,7 +41,28 @@ console.log(bombe);
 //creo array per contenere i numeri dell utente
 var numeriUtente = [];
 // dichiaro una variabile per i tentativi
-var tentativi = 0;
+var tentativi = 3;
+
+//utilizzo ciclo while per richiedere i numeri all'utente
+var j = 0;
+
+while (j < tentativi) {
+  var richiestaNumero = parseInt(prompt("Benvenuto! Inserisci uno alla volta un numero da 1 a 100 e buona fortuna"));
+  //test richiesta del numero
+  // console.log(richiestaNumero);
+  if (inArray(numeriUtente, richiestaNumero) != true) {
+    //inserisco con push i numeri dell utente nell array numeriUtente
+    numeriUtente.push(richiestaNumero);
+  } else {
+    alert("Numero già inserito")
+  }
+
+  j++
+}
+
+//test push utente
+console.log(numeriUtente);
+
 
 
 
