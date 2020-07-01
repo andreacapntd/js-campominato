@@ -14,7 +14,34 @@
 // Il computer deve generare 16 numeri casuali tra 1 e 100.
 // I numeri non possono essere duplicati
 
-//creo un array per contenere i numeri generati random
+//creo un array per contenere i numeri generati random(bombe)
+var bombe = [];
+// utilizzo il ciclo while per generare i numeri random(bombe)
+var i = 0;
+
+while (i < 16) {
+  var numeriRandom = getRandomIntInclusive(1, 100);
+  //test della funzione
+  // console.log(numeriRandom);
+  if (inArray(bombe, numeriRandom) != true) {
+    // test condizione
+    // console.log(inArray(bombe, numeriRandom) != true);
+    // inserisco con push i numeri random nell array bombe
+    bombe.push(numeriRandom)
+  }
+  i++
+}
+
+//test push
+console.log(bombe);
+
+// In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
+// L’utente non può inserire più volte lo stesso numero.
+
+//creo array per contenere i numeri dell utente
+var numeriUtente = [];
+// dichiaro una variabile per i tentativi
+var tentativi = 0;
 
 
 
@@ -29,4 +56,16 @@ function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function inArray (array, elemento) {
+  var i = 0
+  var trovato = false;
+  while (i < array.length && trovato == false) {
+    if (array[i] == elemento) {
+      trovato = true;
+    }
+    i++
+  }
+  return trovato;
 }
