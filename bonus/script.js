@@ -25,11 +25,11 @@ var numeroBombe = 16;
 while (bombe.length < numeroBombe) {
   var numeriRandom;
   //condizioni sulla difficoltà scelta
-  if  (destiny == 0) {
+  if  (destiny == 0 && checkRange(0, 2, destiny) == true) {
     numeriRandom = getRandomIntInclusive(1, 100);
-  } else if (destiny == 1) {
+  } else if (destiny == 1 && checkRange(0, 2, destiny) == true) {
     numeriRandom = getRandomIntInclusive(1, 80);
-  } else if (destiny == 2) {
+  } else if (destiny == 2 && checkRange(0, 2, destiny) == true) {
     numeriRandom = getRandomIntInclusive(1, 50);
   } else {
     alert("BOOOOOOOOM!");
