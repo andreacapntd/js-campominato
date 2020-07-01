@@ -56,20 +56,33 @@ while (numeriUtente.length < tentativi && trovato == false) {
   var richiestaNumero = parseInt(prompt("Benvenuto! Inserisci uno alla volta un numero da 1 a 100 e buona fortuna"));
   //test richiesta del numero
   // console.log(richiestaNumero);
-  if (inArray(numeriUtente, richiestaNumero) != true) {
+  if (checkRange(1, 100, richiestaNumero) == true && inArray(bombe, richiestaNumero) == false && inArray(numeriUtente, richiestaNumero) == false) {
     //inserisco con push i numeri dell utente nell array numeriUtente
     numeriUtente.push(richiestaNumero);
-  } else {
-    alert("Numero già inserito");
+    alert("Grande! Continua così")
+    //test push utente
+
+    punteggio++;
+
   }
 
+  if (inArray(bombe, richiestaNumero)) {
+    trovato = true;
+    alert("BOOOOOOM!");
+    alert("Sei esploso :-( Il tuo punteggio è: " + " " + punteggio);
+  }
 
 
   // j++
 }
-
-//test push utente
 console.log(numeriUtente);
+console.log(punteggio);
+
+
+if (punteggio == tentativi) {
+  alert("Complimenti non sei esploso ed hai vinto");
+}
+
 
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
 // La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
@@ -101,7 +114,7 @@ function inArray (array, elemento) {
 }
 
 function checkRange(min,max,num) {
-  if (num < min || num > max || isNaN(num)) {
+  if (num >= min && num <= max && !isNaN(num)) {
     return true;
   }
   return false;
