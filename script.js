@@ -80,7 +80,7 @@ console.log(punteggio);
 
 
 if (punteggio == tentativi) {
-  alert("Complimenti non sei esploso ed hai vinto");
+  alert("HAI VINTO!!! Il tuo punteggio è: " + " " + punteggio);
 }
 
 
