@@ -44,6 +44,8 @@ console.log(bombe);
 var numeriUtente = [];
 // dichiaro una variabile per i tentativi
 var tentativi = 3;
+// dichiaro una variabile per il punteggio
+var punteggio = 0;
 
 //utilizzo ciclo while per richiedere i numeri all'utente
 // var j = 0;
@@ -58,6 +60,8 @@ while (numeriUtente.length < tentativi) {
   } else {
     alert("Numero già inserito");
   }
+
+
 
   // j++
 }
