@@ -31,7 +31,12 @@ while (bombe.length < numeroBombe) {
     numeriRandom = getRandomIntInclusive(1, 80);
   } else if (destiny == 2 && checkRange(0, 2, destiny) == true) {
     numeriRandom = getRandomIntInclusive(1, 50);
-  } 
+  } else {
+    numeriRandom = getRandomIntInclusive(1, 100);
+  }
+
+
+
   //test della funzione
   // console.log(numeriRandom);
   // I numeri non possono essere duplicati
